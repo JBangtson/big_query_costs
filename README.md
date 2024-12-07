@@ -10,7 +10,7 @@ As data flows through the pipeline, I suggest you filter and clean it on your lo
 
 I advise against querying unfiltered data unless you're using simple functions like 'COUNT' and returning basic data types such as integers or floats. Functions like 'SUM', 'MIN', 'MAX', and 'AVG' are also cost-effective, as arithmetic operations are generally inexpensive. Operators like 'GROUP BY', 'WHERE', and 'LIMIT' are efficient but can become more expensive if large string datatypes are involved. Any time computers parse through large bodies of text, it increases processing.
 
-Additionaly, we can leverage [string compression](query_costs.ipynb) techniques to reduce storage and transmission costs, particularly since HTML documents often contain a significant number of repetitive tokens, however, this will add some time to the project. I haven't calculated and tested how long it would take to compress thousands of htmls.
+Additionaly, we can leverage [string compression](html_compress_test.ipynb) techniques to reduce storage and transmission costs, particularly since HTML documents often contain a significant number of repetitive tokens, however, this will add some time to the project. I haven't calculated and tested how long it would take to compress thousands of htmls.
 
 In summary, the goal is to optimize queries by focusing on frequently accessed data, processing it in smaller, targeted tables to reduce query costs and improve performance. By leveraging inexpensive functions and operators and avoiding unnecessary processing of large, unfiltered datasets, you can keep costs low while maintaining efficiency, leading to successful data management and optimization in Google Cloud.
 
